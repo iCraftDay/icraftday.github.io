@@ -96,3 +96,23 @@ a:hover {
   color: white;
   transform: rotateY(180deg); /* Rückseite wird um 180 Grad gedreht */
 }
+
+.fancy-button {
+  display: inline-block;
+  background: rgb(239, 29, 29);
+  color: white;
+  font-size: 36px;
+  text-decoration: none;
+  padding: 7px 40px;
+  /*border: none;*/
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.6s ease;
+}
+
+.fancy-button:hover {
+  background: rgb(255, 4, 37);
+  box-shadow: 0 10px 17px rgba(0, 0, 0, 0.25);
+  transform: translateY(300px);
+}
