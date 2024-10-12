@@ -100,7 +100,7 @@ a:hover {
 .fancy-button {
   display: inline-block;
   background: rgb(239, 29, 29);
-  color: white;
+  color: white; 
   font-size: 36px;
   text-decoration: none;
   padding: 7px 40px;
