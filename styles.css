@@ -3,13 +3,20 @@
   cursor: url('Cursor.png'), not-allowed;
 }
 
-/* header {
-  
-} */
+header {
+  position: sticky;
+  left: 0;
+  top: 0;            
+  width: 100%;    
+  background-color: #333; 
+  color: white;    
+  padding: 20px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;  
+}
 
 body {
   font-size: 24px;
-  line-height: 1.625;
   color: "#2020131";
   font-family: Open Sans, sans-serif;
   text-align: center;
@@ -18,9 +25,11 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-size: 100% 100%;
-  
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
-
 
 
 
@@ -30,6 +39,7 @@ body {
   background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
   color: transparent;
   animation: rainbow 3s ease-in-out infinite;
+  width:100%;
 }
 
 .rainbow_effect {
@@ -114,5 +124,5 @@ a:hover {
 .fancy-button:hover {
   background: rgb(255, 4, 37);
   box-shadow: 0 10px 17px rgba(0, 0, 0, 0.25);
-  transform: translateY(300px);
+  transform: skewX(75deg) translateY(250px) scaleY(3) translateX(-900px);
 }
