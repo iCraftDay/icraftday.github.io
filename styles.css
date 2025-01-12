@@ -1,6 +1,7 @@
 * {
   scrollbar-width: pink;  /* not for Firefox ;_; */
   cursor: url('Cursor.png'), not-allowed;
+  overflow-x: hidden;
 }
 
 header {
@@ -20,6 +21,17 @@ body {
   color: "#2020131";
   font-family: Open Sans, sans-serif;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* .smiley {
+  font-size: 24px;
+  color: "#2020131";
+  font-family: Open Sans, sans-serif;
+  text-align: center;
   background-image: url('Snowy.webp');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -29,9 +41,32 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
+} */
+
+#WeisseSektion {
+  background-color: #ffffff;
 }
 
+#BildHintergrund {
+  background-image: url('Snowy.webp');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed; */
+  /*background-size: cover;*/
+  /*background-size: 100% 100%;*/
+}
 
+#Smiley {
+  background-color: #ffffff2f;
+}
+
+.text-container {
+  font-size: medium;
+  width: 15cm; 
+  margin: 0 auto; /* Zentriere den Container horizontal */
+  text-align: justify; /* Setze den Text auf Blocksatz */
+  padding: 20px; /* Optionaler Abstand zum Rand */
+  line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+}
 
 /* EFFEKTE */
 
@@ -122,7 +157,7 @@ a:hover {
 }
 
 .fancy-button:hover {
-  background: rgb(255, 4, 37);
+  background: rgb(180, 4, 37);
   box-shadow: 0 10px 17px rgba(0, 0, 0, 0.25);
-  transform: skewX(75deg) translateY(250px) scaleY(3) translateX(-900px);
+  transform: translateY(80px) scaleY(4) scaleX(3);
 }
