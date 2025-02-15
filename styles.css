@@ -45,6 +45,8 @@ body {
 
 #WeisseSektion {
   background-color: #ffffff;
+  z-index: 5;
+  position: relative;
 }
 
 #BildHintergrund {
