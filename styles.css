@@ -4,17 +4,18 @@
   overflow-x: hidden;
 }
 
+/*
 header {
   position: sticky;
   left: 0;
   top: 0;            
-  maw-width: 100%;    
+  max-width: 100%;    
   background-color: #333; 
   color: white;    
   padding: 20px; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;  
-}
+}*/
 
 body {
   font-size: 24px;
@@ -25,6 +26,13 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
+  color: white;
+}
+
+
+.logo {
+  width: 100px;
+  height: auto;
 }
 
 /* .smiley {
@@ -52,7 +60,9 @@ body {
 #BildHintergrund {
   background-image: url('Snowy.webp');
   background-repeat: no-repeat;
-  /*background-attachment: fixed; */
+  background-attachment: fixed;
+  max-width:100%;
+  max-height:auto;/
   /*background-size: cover;*/
   /*background-size: 100% 100%;*/
 }
