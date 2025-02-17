@@ -1,7 +1,8 @@
 * {
   scrollbar-width: pink;  /* not for Firefox ;_; */
-  cursor: url('Cursor.png'), not-allowed;
+  /*cursor: url('Cursor.png'), not-allowed;*/
   overflow-x: hidden;
+  transition-duration: 1s;
 }
 
 /*
