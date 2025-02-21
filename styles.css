@@ -79,6 +79,7 @@ body {
   text-align: justify; /* Setze den Text auf Blocksatz */
   padding: 20px; /* Optionaler Abstand zum Rand */
   line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+  color: black;
 }
 
 /* EFFEKTE */
