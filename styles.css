@@ -47,7 +47,7 @@ body {
 /* Bildgalerie (Slider) */
 .hero_slider_container.uk-slideshow-items {
 
-  max-height: calc( 100vh - 320px);
+  max-height: calc( 100vh - 345px); /* Sieht am besten aus bei mir :) */
   object-position: bottom;
 }
 
