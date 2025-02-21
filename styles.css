@@ -1,3 +1,20 @@
+:root{
+  --rot: rgb(239, 29, 29);
+  --Hintergrund: rgb(19, 152, 219);
+  --white: rgb(255,255,255);
+  --complementary: rgb(195,34,44);
+}
+
+/* Dark-Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --rot: rgb(239, 29, 29);
+    --Hintergrund: rgb(14, 113, 162);
+    --white: rgb(230,230,230);
+    --complementary: rgb(195,34,44);
+  }
+}
+
 * {
   scrollbar-width: pink;  /* not for Firefox ;_; */
   /*cursor: url('Cursor.png'), not-allowed;*/
@@ -5,29 +22,11 @@
   transition-duration: 1s;
 }
 
-/*
-header {
-  position: sticky;
-  left: 0;
-  top: 0;            
-  max-width: 100%;    
-  background-color: #333; 
-  color: white;    
-  padding: 20px; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 1000;  
-}*/
 
 body {
-  font-size: 24px;
-  color: "#2020131";
-  font-family: Open Sans, sans-serif;
+  font-family: 'typeface',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   text-align: center;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  color: white;
+  background: var(--Hintergrund);
 }
 
 
@@ -35,6 +34,59 @@ body {
   width: 100px;
   height: auto;
 }
+
+/* Der Header. */
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.uk-navbar-nav>li>a {
+  text-transform: none;
+}
+
+/* Bildgalerie (Slider) */
+.hero_slider_container.uk-slideshow-items {
+
+  max-height: calc( 100vh - 320px);
+  object-position: bottom;
+}
+
+.hero_slider_container.uk-slideshow-items img {
+
+  object-position: bottom;
+}
+
+/* Der Willkommen-Sektor */
+
+.uk-section-white:not(.uk-preserve-color) .uk-heading-large,
+.uk-section-white:not(.uk-preserve-color) .uk-heading-medium,
+.uk-section-white:not(.uk-preserve-color) .uk-h4,
+.uk-section-white:not(.uk-preserve-color) .uk-h1{
+    color: var(--white);
+}
+
+/* Schamlose Kopiererei. Weiss nicht, woher diese ganzen Definitionen kommen. */
+h1:not(.uk-text-small),
+.uk-h1:not(.uk-text-small),
+h2, .uk-h2,
+.uk-heading-medium,
+.uk-heading-large {
+    font-weight: 700;
+}
+
+.uk-heading-medium.uk-margin-top {
+  overflow: visible; 
+}
+
+
+/* Kartens */
+.uk-card {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--rot); /* Dezente Umrandung */
+}
+
+
 
 /* .smiley {
   font-size: 24px;
@@ -52,6 +104,7 @@ body {
   height: 100%;
 } */
 
+/*
 #WeisseSektion {
   background-color: #ffffff;
   z-index: 5;
@@ -64,23 +117,14 @@ body {
   background-attachment: fixed;
   max-width:100%;
   max-height:auto;/
-  /*background-size: cover;*/
-  /*background-size: 100% 100%;*/
 }
 
 #Smiley {
   background-color: #ffffff2f;
 }
 
-.text-container {
-  font-size: medium;
-  max-width: 15cm; 
-  margin: 0 auto; /* Zentriere den Container horizontal */
-  text-align: justify; /* Setze den Text auf Blocksatz */
-  padding: 20px; /* Optionaler Abstand zum Rand */
-  line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
-  color: black;
-}
+
+*/
 
 /* EFFEKTE */
 
@@ -175,3 +219,9 @@ a:hover {
   box-shadow: 0 10px 17px rgba(0, 0, 0, 0.25);
   transform: translateY(80px) scaleY(4) scaleX(3);
 }
+
+
+/* Nur ein Test */
+
+
+
