@@ -87,7 +87,8 @@ h2, .uk-h2,
     font-weight: 700;
 }
 
-.uk-heading-medium.uk-margin-top {
+.uk-heading-medium.uk-margin-top,
+.uk-h1.uk-margin-top {
   overflow: visible; 
 }
 
