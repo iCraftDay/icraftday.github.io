@@ -4,9 +4,9 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1728723766|299880892';
+const CACHE_VERSION = '1741547235|312611850';
 /** @type {string} */
-const CACHE_PREFIX = 'Crafties Library-sw-cache-';
+const CACHE_PREFIX = 'CraftiesLibrary-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
 /** @type {string} */
 const OFFLINE_URL = 'CraftiesLibrary1.offline.html';
@@ -14,11 +14,11 @@ const OFFLINE_URL = 'CraftiesLibrary1.offline.html';
 const ENSURE_CROSSORIGIN_ISOLATION_HEADERS = true;
 // Files that will be cached on load.
 /** @type {string[]} */
-const CACHED_FILES = ["CraftiesLibrary1.html","CraftiesLibrary1.js","CraftiesLibrary1.offline.html","CraftiesLibrary1.icon.png","CraftiesLibrary1.apple-touch-icon.png","CraftiesLibrary1.worker.js","CraftiesLibrary1.audio.worklet.js"];
+const CACHED_FILES = ["CraftiesLibrary1.html","CraftiesLibrary1.js","CraftiesLibrary1.offline.html","CraftiesLibrary1.icon.png","CraftiesLibrary1.apple-touch-icon.png","CraftiesLibrary1.audio.worklet.js","CraftiesLibrary1.audio.position.worklet.js"];
 // Files that we might not want the user to preload, and will only be cached on first load.
 /** @type {string[]} */
-const CACHABLE_FILES = ["CraftiesLibrary1.wasm","CraftiesLibrary1.pck"];
-const FULL_CACHE = CACHED_FILES.concat(CACHABLE_FILES);
+const CACHEABLE_FILES = ["CraftiesLibrary1.wasm","CraftiesLibrary1.pck"];
+const FULL_CACHE = CACHED_FILES.concat(CACHEABLE_FILES);
 
 self.addEventListener('install', (event) => {
 	event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(CACHED_FILES)));
@@ -99,8 +99,8 @@ self.addEventListener(
 		const referrer = event.request.referrer || '';
 		const base = referrer.slice(0, referrer.lastIndexOf('/') + 1);
 		const local = url.startsWith(base) ? url.replace(base, '') : '';
-		const isCachable = FULL_CACHE.some((v) => v === local) || (base === referrer && base.endsWith(CACHED_FILES[0]));
-		if (isNavigate || isCachable) {
+		const isCacheable = FULL_CACHE.some((v) => v === local) || (base === referrer && base.endsWith(CACHED_FILES[0]));
+		if (isNavigate || isCacheable) {
 			event.respondWith((async () => {
 				// Try to use cache first
 				const cache = await caches.open(CACHE_NAME);
@@ -112,7 +112,7 @@ self.addEventListener(
 					if (missing) {
 						try {
 							// Try network if some cached file is missing (so we can display offline page in case).
-							const response = await fetchAndCache(event, cache, isCachable);
+							const response = await fetchAndCache(event, cache, isCacheable);
 							return response;
 						} catch (e) {
 							// And return the hopefully always cached offline page in case of network failure.
@@ -129,7 +129,7 @@ self.addEventListener(
 					return cached;
 				}
 				// Try network if don't have it in cache.
-				const response = await fetchAndCache(event, cache, isCachable);
+				const response = await fetchAndCache(event, cache, isCacheable);
 				return response;
 			})());
 		} else if (ENSURE_CROSSORIGIN_ISOLATION_HEADERS) {
