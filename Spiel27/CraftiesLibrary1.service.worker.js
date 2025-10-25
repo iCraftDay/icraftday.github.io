@@ -4,9 +4,9 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1758361325|1917447974';
+const CACHE_VERSION = '1761422156|95191955';
 /** @type {string} */
-const CACHE_PREFIX = 'CraftiesLibrary-sw-cache-';
+const CACHE_PREFIX = 'Preload-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
 /** @type {string} */
 const OFFLINE_URL = 'CraftiesLibrary1.offline.html';
